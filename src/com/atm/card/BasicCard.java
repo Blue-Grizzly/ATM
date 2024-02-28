@@ -37,5 +37,7 @@ public class BasicCard implements Card {
     }
 
     public void setAccount(Account account) {
+        this.account = account;
+    }
 
 }
