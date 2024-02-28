@@ -1,4 +1,4 @@
-package com.atm.card;
+package com.atm.Card;
 
 public class BasicCard implements Card {
 
