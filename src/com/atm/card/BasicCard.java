@@ -2,26 +2,34 @@ package com.atm.card;
 
 public class BasicCard implements Card {
 
-    private int cardNumber;
-    private int pin;
+    private String cardNumber;
+    private String pin;
     private String account;
 
-    public int getCardNumber() {
+    public BasicCard(String cardNumber, String pin, string account) {
+        setCardNumber(cardNumber);
+        setPin(pin);
+        setAccount(account);
+    }
+
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
-    public int getPin() {
+    @Override
+    public String getPin() {
         return pin;
     }
 
-    public void setPin(int pin) {
+    public void setPin(String pin) {
         this.pin = pin;
     }
 
+    @Override
     public String getAccount() {
         return account;
     }
