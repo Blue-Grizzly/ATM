@@ -1,12 +1,14 @@
 package com.atm.card;
 
+import com.atm.account.Account;
+
 public class BasicCard implements Card {
 
     private String cardNumber;
     private String pin;
-    private String account;
+    private Account account;
 
-    public BasicCard(String cardNumber, String pin, string account) {
+    public BasicCard(String cardNumber, String pin, Account account) {
         setCardNumber(cardNumber);
         setPin(pin);
         setAccount(account);
@@ -30,11 +32,11 @@ public class BasicCard implements Card {
     }
 
     @Override
-    public String getAccount() {
+    public Account getAccount() {
         return account;
     }
 
-    public void setAccount(String account) {
+    public void setAccount(Account account) {
         this.account = account;
     }
 }
