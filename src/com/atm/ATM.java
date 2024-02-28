@@ -1,4 +1,6 @@
 package com.atm;
+import com.atm.card.BasicCard;
+
 import java.util.Scanner;
 
 
@@ -11,7 +13,7 @@ public class ATM {
         BasicTransactionProcessor transactionProcessor = new BasicTransactionProcessor;
         BasicCashDispenser cashDispenser = new BasicCashDispenser;
 
-        System.out.println("Hello world!");
+        System.out.println("This is an ATM system!");
 
 
         Scanner scanner = new Scanner(System.in);
