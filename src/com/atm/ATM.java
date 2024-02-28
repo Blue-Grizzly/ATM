@@ -17,7 +17,7 @@ public class ATM {
 
         Scanner scanner = new Scanner(System.in);
 
-        String input = scanner.next();
+
         boolean quit = false;
 
         while(!quit){
@@ -27,6 +27,7 @@ public class ATM {
             System.out.println("|                        |");
             System.out.println("+------------------------+");
 
+            String input = scanner.next();
             if(input.equals("quit")){
                 Card card = cardReader.validateCard(scanner.next());
                 if(card != null){
