@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9115b117-f75d-43a8-9a56-047f27b6b83e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/atm/security/SecuritySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/atm/security/SecuritySystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/atm/security/SecurityValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/atm/security/SecurityValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
