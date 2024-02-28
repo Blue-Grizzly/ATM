@@ -23,7 +23,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Transaction"
+    "git-widget-placeholder": "Transaction",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="SharedIndexes">
