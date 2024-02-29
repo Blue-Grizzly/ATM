@@ -25,31 +25,53 @@ public class ATM {
             System.out.println("|                        |");
             System.out.println("|-This is an ATM system!-|");
             System.out.println("|                        |");
+            System.out.println("|    MSG_INSERT_CARD     |");
+            System.out.println("|                        |");
             System.out.println("+------------------------+");
 
             String input = scanner.next();
-            if(input.equals("quit")){
-                Card card = cardReader.validateCard(scanner.next());
+            if(!input.equals("quit")){
+                Card card = cardReader.validateCard(input);
                 if(card != null){
+                    System.out.println("+------------------------+");
+                    System.out.println("|                        |");
+                    System.out.println("|     MSG_INPUT_PIN      |");
+                    System.out.println("|                        |");
+                    System.out.println("+------------------------+");
                     Account account = card.getAccount();
                     String pinCode = scanner.next();
-
                     if(securitySystem.ValidateCard(card.getPin(), pinCode)){
-                        System.out.println("MSG_INPUT_AMOUNT");
+                        System.out.println("+------------------------+");
+                        System.out.println("|                        |");
+                        System.out.println("|    MSG_INPUT_AMOUNT    |");
+                        System.out.println("|                        |");
+                        System.out.println("+------------------------+");
                         double amount = Double.parseDouble(scanner.next());
 
                         transactionProcessor.processTransaction(account, amount);
                         cashDispenser.ATMMessage(amount);
                     } else {
-                        System.out.println("ERR_AUTHENTICATION");
+                        System.out.println("+------------------------+");
+                        System.out.println("|                        |");
+                        System.out.println("|   ERR_AUTHENTICATION   |");
+                        System.out.println("|                        |");
+                        System.out.println("+------------------------+");
                     }
                 } else {
-                    System.out.println("ERR_INVALID_CARD");
+                    System.out.println("+------------------------+");
+                    System.out.println("|                        |");
+                    System.out.println("|    ERR_INVALID_CARD    |");
+                    System.out.println("|                        |");
+                    System.out.println("+------------------------+");
                 }
 
             } else {
                 quit = true;
-                System.out.println("MSG_QUIT_RECIEVED");
+                System.out.println("+------------------------+");
+                System.out.println("|                        |");
+                System.out.println("|    MSG_QUIT_RECEIVED   |");
+                System.out.println("|                        |");
+                System.out.println("+------------------------+");
             }
         }
     }
