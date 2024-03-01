@@ -44,8 +44,10 @@ public class BasicAccount implements Account{
         if (amount > 0 && amount <= balance) {
             balance -= amount;
             System.out.println("Withdrawal of $" + amount + " successful. Current balance is $" + balance);
-        }
+            return true;
+        } else {
         System.out.println("Insufficient funds. Withdrawal of $" + amount + " failed. Current balance is $" + balance);
         return false;
+        }
     }
 }

@@ -32,24 +32,40 @@ public class ATM {
             String input = scanner.next();
             if(!input.equals("quit")){
                 Card card = cardReader.validateCard(input);
+
                 if(card != null){
+
                     System.out.println("+------------------------+");
                     System.out.println("|                        |");
                     System.out.println("|     MSG_INPUT_PIN      |");
                     System.out.println("|                        |");
                     System.out.println("+------------------------+");
+
                     Account account = card.getAccount();
                     String pinCode = scanner.next();
+
                     if(securitySystem.ValidateCard(card.getPin(), pinCode)){
+
                         System.out.println("+------------------------+");
                         System.out.println("|                        |");
                         System.out.println("|    MSG_INPUT_AMOUNT    |");
                         System.out.println("|                        |");
                         System.out.println("+------------------------+");
+
                         double amount = Double.parseDouble(scanner.next());
 
-                        transactionProcessor.processTransaction(account, amount);
-                        cashDispenser.ATMMessage(amount);
+                        cashDispenser.ATMMessage(amount, transactionProcessor.processTransaction(account, amount));
+
+                        System.out.println("Quit?(Y/n)");
+                        char confirm = scanner.next().charAt(0);
+                        if(confirm == 'y'){
+                            quit=true;
+                            System.out.println("+------------------------+");
+                            System.out.println("|                        |");
+                            System.out.println("|    MSG_QUIT_RECEIVED   |");
+                            System.out.println("|                        |");
+                            System.out.println("+------------------------+");
+                        }
                     } else {
                         System.out.println("+------------------------+");
                         System.out.println("|                        |");
